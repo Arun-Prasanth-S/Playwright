@@ -18,7 +18,7 @@ public class HomepageTest  {
 		BC = new BaseClassPW();
 		page = BC.launchBrowser("chrome", "https://www.amazon.in/");
 		homepage = new HomePage(page);
-		int i = 0;
+		
 		
 	}
 	
