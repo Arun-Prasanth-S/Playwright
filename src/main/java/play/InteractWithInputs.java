@@ -2,7 +2,6 @@ package play;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
-import com.microsoft.playwright.ElementHandle;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
