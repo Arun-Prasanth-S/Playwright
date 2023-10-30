@@ -17,7 +17,8 @@ public class HomepageTest  {
 	@BeforeMethod
 	public void frontPage() {
 		BC = new BaseClassPW();
-		page = BC.launchBrowser("chrome", "https://www.amazon.in/");
+		page = BC.launchBrowser("chrome",  
+		                        "https://www.amazon.in/");
 		 homepage = new HomePage(page);
 		
 		
