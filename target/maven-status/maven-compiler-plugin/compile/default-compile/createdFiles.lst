@@ -1,0 +1,10 @@
+play\frameHandling.class
+play\handleDropDown.class
+baseplaywright\Locators.class
+play\HandleAlerts.class
+play\InteractWithInputs.class
+amazon\pages\HomePage.class
+baseplaywright\BaseClassPW.class
+play\windowHandelling.class
+play\codegen.class
+play\LearnScreenshots.class
