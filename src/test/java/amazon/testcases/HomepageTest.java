@@ -10,7 +10,7 @@ import com.microsoft.playwright.Page;
 import amazon.pages.HomePage;
 import baseplaywright.BaseClassPW;
 
-public class HomepageTest  {
+public class HomepageTest extends baseplaywright.BaseClassPW {
 	HomePage homepage;
 	Page page;
 	BaseClassPW BC;
