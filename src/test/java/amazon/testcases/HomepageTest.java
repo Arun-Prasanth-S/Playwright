@@ -5,19 +5,16 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.microsoft.playwright.Page;
-
 import amazon.pages.HomePage;
-import baseplaywright.BaseClassPW;
 
 public class HomepageTest extends baseplaywright.BaseClassPW {
 	HomePage homepage;
-	Page page;
-	BaseClassPW BC;
+	
+//	BaseClassPW BC;
 	@BeforeMethod
 	public void frontPage() {
-		BC = new BaseClassPW();
-		page = BC.launchBrowser("chrome",  
+//		BC = new BaseClassPW();
+		page = launchBrowser("chrome",  
 		                        "https://www.amazon.in/");
 		 homepage = new HomePage(page);
 		
@@ -37,12 +34,12 @@ public class HomepageTest extends baseplaywright.BaseClassPW {
 	}
 	@AfterMethod
 	public void close() {
-		BC.closeAll();
+		closeAll();
 	}
 
 	@AfterTest
 	public void quit() {
 	
-		BC.closePlaywright();
+		closePlaywright();
 	}
 }

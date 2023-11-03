@@ -20,7 +20,7 @@ public class InteractWithInputs {
 			assertThat(page.locator("#message")).hasText("hey Tester");
 			
 			page.navigate("https://www.lambdatest.com/selenium-playground/generate-file-to-download-demo");
-			page.locator("\"#textbox\"").fill("Ever wished you had an expert 'wingman' to guide you through your dating journey, providing answers and advice in real-time?");
+			page.locator("#textbox").fill("Ever wished you had an expert 'wingman' to guide you through your dating journey, providing answers and advice in real-time?");
 			
 //		ElementHandle elementHandle = page.locator("#textbox").elementHandle();
 //		elementHandle.press("Shift");

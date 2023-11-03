@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 import java.util.List;
 public class BaseClassPW {
 	Playwright playwright;
-	Page page;
+	public Page page;
 	BrowserContext context;
 	Browser browser;
 	

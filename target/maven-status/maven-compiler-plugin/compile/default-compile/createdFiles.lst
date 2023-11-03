@@ -3,6 +3,7 @@ play\handleDropDown.class
 baseplaywright\Locators.class
 play\HandleAlerts.class
 play\InteractWithInputs.class
+play\ShadowDomElement.class
 amazon\pages\HomePage.class
 baseplaywright\BaseClassPW.class
 play\windowHandelling.class
