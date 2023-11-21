@@ -15,20 +15,20 @@ public class SkipLogin {
 		Playwright playwright = Playwright.create();
 		LaunchOptions setHeadless = new BrowserType.LaunchOptions().setHeadless(false);
 		BrowserContext context = playwright.chromium().launch(setHeadless).newContext(
-				new Browser.NewContextOptions().setStorageStatePath(Paths.get("auth.json"))
+				new Browser.NewContextOptions().setStorageStatePath(Paths.get("./test-output/auth.json"))
 				);
 		Page page = context.newPage();
 		page.navigate("https://bookcart.azurewebsites.net/");
-		page.click("//span[text()='Login']/..");
-		page.locator("input[formcontrolname='username']").fill("ortoni");
-		page.locator("input[formcontrolname='password']").fill("Pass1234$");
-		page.locator("button[color='primary']").click();
+//		page.click("//span[text()='Login']/..");
+//		page.locator("input[formcontrolname='username']").fill("ortoni");
+//		page.locator("input[formcontrolname='password']").fill("Pass1234$");
+//		page.locator("button[color='primary']").click();
 		String userName = page.locator("//button[contains(@class,'mat-focus-indicator mat-menu-trigger')]//span[1]")
 				.textContent();
 		String user = userName.split(" ")[1].split(" ")[0];
 		System.out.println("User: "+user);
 		// generate the auth
-		context.storageState(new StorageStateOptions().setPath(Paths.get("./test-output/auth.json")));
+//		context.storageState(new StorageStateOptions().setPath(Paths.get("./test-output/auth.json")));
 		
 		playwright.close();
 
