@@ -2,8 +2,12 @@ package com.chatgpt.pages;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
+import java.awt.Taskbar.State;
+
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.LoadState;
+
 import baseplaywright.BaseClassPW;
 
 public class ChatGptEntryPage extends BaseClassPW{
@@ -53,15 +57,15 @@ public class ChatGptEntryPage extends BaseClassPW{
 	
 	}
 	public void signinPage() {
-		
 		btnClick(signInBtn);
+		page.waitForLoadState(LoadState.LOAD);
 		enterText(email, EMAIL);
 		System.out.println(getText(haveAccount));
 		assertThat(haveAccount).containsText("Already have an account?");
 		System.out.println(getText(loginElementbtn));
 		assertThat(loginElementbtn).containsText("Log in");
 		btnClick(ContinueBtn);
-		enterText(signinPassword, "qwertyuiop");
+		enterText(signinPassword, "qwertyuiop"); 
 		btnClick(ContinueBtn);
 		System.out.println(getText(errorMsg));
 		assertThat(errorMsg).containsText("The user already exists.");

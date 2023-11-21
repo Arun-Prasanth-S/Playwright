@@ -17,7 +17,6 @@
       <artifactId>testng</artifactId>
       <version>6.9.8</version>
     </dependency>
-    
     <!-- https://mvnrepository.com/artifact/org.jboss.aerogear/aerogear-otp-java -->
 <dependency>
     <groupId>org.jboss.aerogear</groupId>

@@ -10,7 +10,7 @@ public class EntryPageTC extends baseplaywright.BaseClassPW {
 	ChatGptEntryPage ChatGptEntryPage;
 	@BeforeTest
 	public void launchPage() {
-		Page page = launchBrowser("chromium", "https://chat.openai.com/auth/login");
+		Page page = launchBrowser("chrome", "https://chat.openai.com/auth/login");
 		
 		ChatGptEntryPage =new ChatGptEntryPage(page);
 	}

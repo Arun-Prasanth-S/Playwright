@@ -1,11 +1,15 @@
 package play;
 
 import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import com.microsoft.playwright.Tracing;
+
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
+import java.nio.file.Path;
 import java.util.List;
 
 public class windowHandelling {
@@ -13,7 +17,12 @@ public class windowHandelling {
 	public static void main(String[] args) {
 		Playwright playwright = Playwright.create();
 		Browser browser = playwright.chromium().launch(new LaunchOptions().setHeadless(false));
-		Page page = browser.newPage();
+		BrowserContext newContext = browser.newContext();
+		newContext.tracing().start(new Tracing.StartOptions()
+				                              .setSnapshots(true)
+				                              .setSnapshots(true)
+				                              .setSources(true));
+		Page page = newContext.newPage();
 		page.navigate("https://www.lambdatest.com/selenium-playground/window-popup-modal-demo");
 		System.out.println(page.title());
 		Page Popup = page.waitForPopup(()->{
@@ -41,6 +50,12 @@ public class windowHandelling {
 		System.out.println(tab.title());
 		});
 //		Page openpage1 = pages.get(0);
+		newContext.tracing().stop(new Tracing.StopOptions()
+				                             .setPath(Path.of("trace.zip")));
+		
+		page.close();
+		browser.close();
+		playwright.close();
 		
 
 	}
