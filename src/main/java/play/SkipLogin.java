@@ -15,7 +15,8 @@ public class SkipLogin {
 		Playwright playwright = Playwright.create();
 		LaunchOptions setHeadless = new BrowserType.LaunchOptions().setHeadless(false);
 		BrowserContext context = playwright.chromium().launch(setHeadless).newContext(
-				new Browser.NewContextOptions().setStorageStatePath(Paths.get("./test-output/auth.json"))
+				//use this to to skip the authentication and go to the next step //always use json file to do that
+//				new Browser.NewContextOptions().setStorageStatePath(Paths.get("./test-output/auth.json"))
 				);
 		Page page = context.newPage();
 		page.navigate("https://bookcart.azurewebsites.net/");
@@ -27,8 +28,10 @@ public class SkipLogin {
 				.textContent();
 		String user = userName.split(" ")[1].split(" ")[0];
 		System.out.println("User: "+user);
-		// generate the auth
+		// first use this to generate the auth and then use it to login with out any authenthication
 //		context.storageState(new StorageStateOptions().setPath(Paths.get("./test-output/auth.json")));
+		
+		
 		
 		playwright.close();
 

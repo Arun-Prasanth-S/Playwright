@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-14T12:50:45 IST" name="Default suite" finished-at="2023-12-14T12:50:57 IST" duration-ms="11912">
+    <groups>
+    </groups>
+    <test started-at="2023-12-14T12:50:45 IST" name="Default test" finished-at="2023-12-14T12:50:57 IST" duration-ms="11912">
+      <class name="com.OrangeHRM.TestCases.OrangeHRMForgetPasswordTestCase">
+        <test-method is-config="true" signature="launchOrangeHRMWebsite()[pri:0, instance:com.OrangeHRM.TestCases.OrangeHRMForgetPasswordTestCase@223aa2f7]" started-at="2023-12-14T12:50:45 IST" name="launchOrangeHRMWebsite" finished-at="2023-12-14T12:50:54 IST" duration-ms="8939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchOrangeHRMWebsite -->
+        <test-method signature="loggInPage()[pri:0, instance:com.OrangeHRM.TestCases.OrangeHRMForgetPasswordTestCase@223aa2f7]" started-at="2023-12-14T12:50:54 IST" name="loggInPage" finished-at="2023-12-14T12:50:57 IST" duration-ms="2777" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loggInPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.OrangeHRM.TestCases.OrangeHRMForgetPasswordTestCase@223aa2f7]" started-at="2023-12-14T12:50:57 IST" name="tearDown" finished-at="2023-12-14T12:50:57 IST" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.OrangeHRM.TestCases.OrangeHRMForgetPasswordTestCase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
